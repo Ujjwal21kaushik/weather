@@ -211,8 +211,10 @@
         border-radius: 99px;
 }
 
-.location .time , .date{
+.location .time{
     font-size: 10px;
 }
-
+.location .date{
+    font-size: 10px;
+}
 }
