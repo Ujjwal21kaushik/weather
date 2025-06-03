@@ -97,6 +97,16 @@ function getCurrentDate() {
   }
   return currentdate.toLocaleDateString('en-GB',options)
 }
+// ----Get Current Time------
+  const currentTime = new Date()
+  let hour = currentTime.getHours()
+  const minute = currentTime.getMinutes().toString().padStart(2,'0');
+  const ampm = hour>=12 ?'PM': 'AM'
+  hour = hour %12
+  hour = hour ? hour :12
+  // console.log(hour+ " :" + minute + ampm)
+  Time.textContent =hour + ':' + minute + ampm
+  // ---end-------
 
 
 
@@ -138,8 +148,9 @@ async function updateforecastinfo(city){
 
   const timeTaken ='12:00:00'
   const todaydate = new Date().toISOString().split('T')[0]
-
-
+  
+  
+  
   weeklydata.innerHTML = ' '
   forecastDate.list.forEach(forecastWeather => {
     if (forecastWeather.dt_txt.includes(timeTaken) && !forecastWeather.dt_txt.includes(todaydate) ){
