@@ -20,7 +20,7 @@ function breaktext(params) {
 breaktext()
 
 gsap.from(".loGO", {
-    x:-60,
+    y:-60,
     opacity:0,
     duration:0.8,
     delay:0.5,
@@ -42,7 +42,7 @@ gsap.from(".climax .aright", {
     stagger:-0.2
 })
 gsap.from(".input", {
-    x:60,
+    x:-60,
     opacity:0,
     duration:0.8,
     delay:0.5
