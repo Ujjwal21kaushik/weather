@@ -22,7 +22,7 @@ breaktext()
 gsap.from(".loGO", {
     x:-60,
     opacity:0,
-    duration:0.5,
+    duration:0.8,
     delay:0.5,
     // stagger:0.2
 })
@@ -30,35 +30,35 @@ gsap.from(".loGO", {
 gsap.from(".climax .aleft", {
     y:60,
     opacity:0,
-    duration:0.7,
+    duration:1,
     delay:0.5,
     stagger:0.2
 })
 gsap.from(".climax .aright", {
     y:60,
     opacity:0,
-    duration:0.7,
+    duration:1,
     delay:0.5,
     stagger:-0.2
 })
 gsap.from(".input", {
     x:60,
     opacity:0,
-    duration:0.5,
+    duration:0.8,
     delay:0.5
 })
 
 gsap.from('.degree ,.locationImage , .countryname , .Calender, .date',{
     x:-20,
     opacity:0,
-    duration:1,
+    duration:1.2,
     delay:0.5,
-    stagger:0.2
+    stagger:0.4
 })
 gsap.from(' .idimage ,.main',{
     y:20,
     opacity:0,
-    duration:1,
+    duration:1.2,
     delay:0.5,
     stagger:0.8
 })
@@ -66,7 +66,7 @@ gsap.from(' .idimage ,.main',{
 gsap.from(' .high , .justtocover',{
     y:20,
     opacity:0,
-    duration:0.8,
+    duration:1.8,
     delay:0.5,
     stagger:0.1
 })
