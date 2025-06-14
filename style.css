@@ -32,9 +32,9 @@ body::-webkit-scrollbar-thumb{
 
 #city-loader{
     position: absolute;
-    width: 3rem;
-    height: 3rem;
-    top: 50%;
+    width: 2rem;
+    height: 2rem;
+    top: 30%;
     left: 50%;
     border: 4px solid rgb(179, 178, 178);
     border-radius: 50%;
@@ -91,13 +91,12 @@ body::-webkit-scrollbar-thumb{
     background: rgba(181, 175, 175, 0.345);
     box-shadow:0 8px 32px 0 rgba(0, 0, 0, 0.4) ;
     backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(10px);
-    overflow: hidden;
+
 }
 .logo{
     display: flex;
     align-items: center;
-    
+    overflow: hidden;
 }
 .logo > img{
     width:min(52px ,14%);
@@ -105,7 +104,7 @@ body::-webkit-scrollbar-thumb{
 .logo > h1{
     font-size: clamp(1.5rem , 4vw ,2.5rem);
     align-content: center;
-    /* overflow: hidden; */
+    overflow: hidden;
 }
 .climax > span{
     display: inline-block;
