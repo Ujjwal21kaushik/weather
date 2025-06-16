@@ -11,7 +11,15 @@ let citiesLoaded = false;
 const skipwords = ["weather", "rain", "sun", "cloud", "temperature", "forecast" , "of" , "is" ,"give"] 
 const words =["today" ,"tommarow"] 
 
+function toggleLoader(show = true) {
+  const loader = document.getElementById("city-loader");
+  loader.style.opacity="1"
+  if (loader) {
+  loader.style.display = show ? "block" : "none";
 
+  }
+
+}
 
 //-----speak function--------
 if (SpeechRecognition) {
@@ -118,16 +126,6 @@ document.addEventListener('click',(e)=>{
 //      ----- Ends ------
 
 
-
-function toggleLoader(show = true) {
-  const loader = document.getElementById("city-loader");
-  if (loader) {
-    loader.style.display = show ? "block" : "none";
-
-  }
-
-}
-
 // *******------------Fetch cities-------------******** 
 
 fetch("https://raw.githubusercontent.com/dr5hn/countries-states-cities-database/master/json/cities.json")
@@ -149,6 +147,8 @@ function checkCity(userinput){
     return;
   }
   toggleLoader(true)
+  micimg.style.opacity = "0";
+
   setTimeout(() => { 
     const lowerinput = userinput.toLowerCase();
     const foundcity = cities.find(city => {
@@ -174,6 +174,8 @@ function checkCity(userinput){
           alert("❌ No City is found.")
           bar.value='';
           toggleLoader(false)
+          micimg.style.opacity = "1";
+
       }
   }, 50);
 }
